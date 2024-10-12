@@ -1,0 +1,19 @@
+n , m = map(int,input().split())
+an = [0 for x in range (31)]
+am = [0 for x in range (31)]
+c = 0
+for i in range(n) :
+    r , l = map(int,input().split())
+    for j in range(r,l+1) :
+        an[j] = 1
+        
+for i in range(m) :
+    r , l = map(int,input().split())
+    for j in range(r,l+1) :
+        am[j] = 1
+        
+for i in range(31) :
+    if an[i] and am[i] :
+        c += 1
+        
+print(c)
